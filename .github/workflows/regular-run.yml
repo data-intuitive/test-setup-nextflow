@@ -1,0 +1,15 @@
+name: Without maximize-build-space 
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      
+      - uses: nf-core/setup-nextflow@v1
+
+      - run: nextflow -v
